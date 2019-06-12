@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="100dp"
+    android:background="?android:windowBackground"
+    tools:context=".Fragments.Category_fragment">
+
+
+    <RelativeLayout
+        android:layout_gravity="top"
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+    <android.support.design.card.MaterialCardView
+        android:id="@+id/card_view"
+        app:cardCornerRadius="10dp"
+        android:background="#A5A5A5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/TAG"
+                android:background="@drawable/ic_tag_bg_yello"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:padding="5dp"
+                android:paddingBottom="5dp"
+                android:layout_centerInParent="true"
+                android:layout_below="@+id/TAG"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/montserrat_medium"
+                android:textAlignment="center"
+                android:id="@+id/text_item"
+                android:text="@string/text_item_them"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <LinearLayout
+                android:layout_marginRight="20dp"
+                android:paddingBottom="10dp"
+                android:layout_below="@+id/text_item"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_marginRight="20dp"
+                    android:id="@+id/like_item_lottie"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/ic_heart"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0"
+                    app:lottie_autoPlay="false"
+                    app:lottie_fileName="heart_animation.json"
+                    app:lottie_loop="false" />
+                <TextView
+                    android:layout_marginRight="20dp"
+                    android:textSize="10sp"
+                    android:id="@+id/nbr_like"
+                    android:text="12k"
+                    android:textColor="#B5525C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </android.support.design.card.MaterialCardView>
+
+
+
+    <android.support.design.card.MaterialCardView
+        android:id="@+id/card_view1"
+        app:cardCornerRadius="10dp"
+        android:background="#A5A5A5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/card_view">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/TAG1"
+                android:background="@drawable/ic_tag_bg_yello"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:padding="5dp"
+                android:paddingBottom="5dp"
+                android:layout_centerInParent="true"
+                android:layout_below="@+id/TAG1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/montserrat_medium"
+                android:textAlignment="center"
+                android:id="@+id/text_item1"
+                android:text="@string/text_item_them"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <LinearLayout
+                android:layout_marginRight="20dp"
+                android:paddingBottom="10dp"
+                android:layout_below="@+id/text_item1"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_marginRight="20dp"
+                    android:id="@+id/like_item_lottie1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/ic_heart"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0"
+                    app:lottie_autoPlay="false"
+                    app:lottie_fileName="heart_animation.json"
+                    app:lottie_loop="false" />
+                <TextView
+                    android:layout_marginRight="20dp"
+                    android:textSize="10sp"
+                    android:id="@+id/nbr_like1"
+                    android:text="12k"
+                    android:textColor="#B5525C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </android.support.design.card.MaterialCardView>
+
+    </RelativeLayout>
+
+</FrameLayout>
