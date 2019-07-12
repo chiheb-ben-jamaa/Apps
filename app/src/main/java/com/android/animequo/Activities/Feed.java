@@ -152,13 +152,12 @@ public class Feed extends AppCompatActivity implements
         }
         //else Maybe missing there :
 
-
-
     }
 
 
 
     private void TimerCloseLayer_copied() {
+
         //close the layer pop after 5 Seconds:
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -166,6 +165,10 @@ public class Feed extends AppCompatActivity implements
 
                 try {
 
+
+
+                    //the animted_c(omp: copied_layer:
+                    //the host_comp: bottom_Nav_bar:
                     //TODO: add the fade out animation :
                     coiped_layer.setVisibility(View.INVISIBLE);
                     copied_animation.startAnimation(animte_down);

@@ -1,5 +1,6 @@
 package com.android.animequo.Fragments;
 
+import android.animation.Animator;
 import android.app.Activity;
 import android.content.ClipData;
 import android.content.ClipboardManager;
@@ -31,9 +32,11 @@ public class Category_fragment extends Fragment {
 
 
   //TODO: Init the Lottie Animation :
-    com.airbnb.lottie.LottieAnimationView like_item_lottie1,like_item_lottie;
+    com.airbnb.lottie.LottieAnimationView like_item_lottie1,like_item_lottie,loading_card_view2,loading_card_view1;
     public boolean clicked=false;
     TextView text_item;
+    RelativeLayout content_card2,content_card1;
+
 
 
 
@@ -45,6 +48,13 @@ public class Category_fragment extends Fragment {
         //decalre the var :
         like_item_lottie=(com.airbnb.lottie.LottieAnimationView)view.findViewById(R.id.like_item_lottie);
         like_item_lottie1=(com.airbnb.lottie.LottieAnimationView)view.findViewById(R.id.like_item_lottie1);
+        loading_card_view2=(com.airbnb.lottie.LottieAnimationView)view.findViewById(R.id.loading_card_view2);
+        loading_card_view1=(com.airbnb.lottie.LottieAnimationView)view.findViewById(R.id.loading_card_view1);
+
+        content_card2=(RelativeLayout)view.findViewById(R.id.content_card2);
+        content_card1=(RelativeLayout)view.findViewById(R.id.content_card1);
+
+
 
         final CardView item=(CardView)view.findViewById(R.id.card_view);
         text_item=(TextView)view.findViewById(R.id.text_item);
@@ -92,7 +102,36 @@ public class Category_fragment extends Fragment {
         });
     }
 
+    private void init_recyucleur_animation(){
 
+        loading_card_view1.playAnimation();
+        loading_card_view1.setVisibility(View.VISIBLE);
+       loading_card_view1.addAnimatorListener(new Animator.AnimatorListener() {
+           @Override
+           public void onAnimationStart(Animator animator) {
+               //TODO: set the animation visible :
+
+
+           }
+
+           @Override
+           public void onAnimationEnd(Animator animator) {
+               //TODO: set the animation visible :
+                loading_card_view1.setVisibility(View.INVISIBLE);
+
+           }
+
+           @Override
+           public void onAnimationCancel(Animator animator) {
+
+           }
+
+           @Override
+           public void onAnimationRepeat(Animator animator) {
+
+           }
+       });
+    }
     public void CopyToClipboard(String copyText) {
 
         ClipboardManager clipboard = (ClipboardManager)getContext().getSystemService(Context.CLIPBOARD_SERVICE);

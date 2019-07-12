@@ -32,6 +32,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/loading_card_view1"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="false"
+                app:lottie_fileName="recyculeur_view_animation.json"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <RelativeLayout
+                android:id="@+id/content_card1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
             <TextView
                 android:id="@+id/TAG"
                 android:background="@drawable/ic_tag_bg_yello"
@@ -87,6 +101,7 @@
 
 
             </LinearLayout>
+            </RelativeLayout>
         </RelativeLayout>
 
     </android.support.design.card.MaterialCardView>
@@ -105,9 +120,23 @@
         android:layout_below="@+id/card_view">
 
 
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/loading_card_view2"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="false"
+                app:lottie_fileName="recyculeur_view_animation.json"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:id="@+id/content_card2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/TAG1"
@@ -164,6 +193,8 @@
 
 
             </LinearLayout>
+            </RelativeLayout>
+
         </RelativeLayout>
 
     </android.support.design.card.MaterialCardView>
